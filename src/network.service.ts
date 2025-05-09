@@ -72,10 +72,8 @@ class NetworkService {
       messageType: 'data-sync',
       data: {
         user: {
-          userName,
-          email,
-          country,
-          userKeyId: id,
+          name: userName,
+          keyId: id,
           customizedProperties,
         },
         timestamp
@@ -185,7 +183,7 @@ class NetworkService {
         }))
       }];
   
-      await post(`${this.api}/api/public/track`, payload, { envSecret: this.secret });
+      //await post(`${this.api}/api/public/track`, payload, { envSecret: this.secret });
     } catch (err) {
       logger.logDebug(err);
     }
