@@ -141,7 +141,7 @@ class NetworkService {
   private __getUserInfo(): any {
     const { userName, email, country, id, customizedProperties } = this.user!;
     return {
-      userName,
+      name: userName,
       email,
       country,
       keyId: id,
@@ -183,7 +183,7 @@ class NetworkService {
         }))
       }];
   
-      //await post(`${this.api}/api/public/track`, payload, { envSecret: this.secret });
+      await post(`${this.api}/api/public/Insight/track`, payload, { Authorization: this.secret });
     } catch (err) {
       logger.logDebug(err);
     }
