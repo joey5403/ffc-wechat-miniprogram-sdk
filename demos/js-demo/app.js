@@ -4,7 +4,7 @@ import ffcClient from './ffc-wechat-miniprogram-sdk/index';
 App({
   onLaunch() {
     const option = {
-      api: "https://feat.hosecloud.com/",
+      api: "https://feat.test.com/",
       secret: "", // replace with your won secret
       user: {
         id: 'anonymous',
